@@ -1,0 +1,49 @@
+﻿<div ng-controller="validationCtl">
+    <h1>{{message.title}}</h1>
+    <button ng-click="validate()">Validate Now</button>
+
+    <section id="todoapp" ng-controller="toDoCtrl">
+			<header id="header">
+				<h1>toDoItems</h1>
+				<form id="todo-form" ng-submit="vm.addToDo()">
+					<input id="new-todo" placeholder="What needs to be done?" ng-model="newToDo" autofocus>
+				</form>
+			</header>
+			<section id="main" ng-show="toDoItems.length" ng-cloak>
+				<input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="vm.markAll(!allChecked)">
+				<label for="toggle-all">Mark all as complete</label>
+				<ul id="todo-list">
+					<li ng-repeat="todo in toDoItems | filter:statusFilter track by $index" ng-class="{completed: todo.completed, editing: todo == editedToDo}">
+						<div class="view">
+							<input class="toggle" type="checkbox" ng-model="todo.completed">
+							<label ng-dblclick="vm.editToDo(todo)">{{todo.title}}</label>
+							<button class="destroy" ng-click="vm.removeToDo(todo)"></button>
+						</div>
+						<form ng-submit="vm.doneEditing(todo)">
+							<input class="edit" ng-model="todo.title" todo-blur="vm.doneEditing(todo)" todo-focus="todo == editedToDo">
+						</form>
+					</li>
+				</ul>
+			</section>
+			<footer id="footer" ng-show="toDoItems.length" ng-cloak>
+				<span id="todo-count"><strong>{{remainingCount}}</strong>
+					<ng-pluralize count="remainingCount" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
+				</span>
+				<ul id="filters">
+					<li>
+						<a ng-class="{selected: location.path() == '/'} " href="#/">All</a>
+					</li>
+					<li>
+						<a ng-class="{selected: location.path() == '/active'}" href="#/active">Active</a>
+					</li>
+					<li>
+						<a ng-class="{selected: location.path() == '/completed'}" href="#/completed">Completed</a>
+					</li>
+				</ul>
+				<button id="clear-completed" ng-click="vm.clearDoneTodos()" ng-show="doneCount">Clear completed ({{doneCount}})</button>
+			</footer>
+		</section>
+		<footer id="info">
+			<p>Double-click to edit a todo</p>
+		</footer>
+</div>

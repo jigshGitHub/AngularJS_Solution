@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialWeb", "TutorialWeb\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1", "MvcApplication1\MvcApplication1.csproj", "{3952FBF9-A364-4AB8-9B62-19B6E157D674}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialTypeScriptWeb", "TutorialTypeScriptWeb\TutorialTypeScriptWeb.csproj", "{5C8CA696-C5CE-4773-B865-BB8217B9316D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{3952FBF9-A364-4AB8-9B62-19B6E157D674}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3952FBF9-A364-4AB8-9B62-19B6E157D674}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3952FBF9-A364-4AB8-9B62-19B6E157D674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C8CA696-C5CE-4773-B865-BB8217B9316D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C8CA696-C5CE-4773-B865-BB8217B9316D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C8CA696-C5CE-4773-B865-BB8217B9316D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C8CA696-C5CE-4773-B865-BB8217B9316D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
